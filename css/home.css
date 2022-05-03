@@ -234,9 +234,11 @@ a[href='#anchor']{
     }
 }
 .sectionTitle{
+    width: fit-content ;
     padding: 1rem;
     margin-inline: 7rem;
     font-size: xx-large;
+    border-left: .2rem solid #ee0572;
 }
 @media only screen and (max-width: 768px) {
     .sectionTitle{
