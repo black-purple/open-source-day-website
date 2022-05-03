@@ -3,12 +3,14 @@ document.body.onscroll = () => {
     let toUp = document.querySelector('[href="#anchor"]');
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
         header.style.backgroundColor = '#1c1b2299';
+        header.style.backdropFilter = 'blur(10px)';
         header.style.transition = 'background .1s ease-in';
         toUp.style.display = 'inline';
     }else{
         header.style.backgroundColor = '#1c1b2200';
         header.style.transition = 'background .1s ease-out';
         toUp.style.display = 'none';
+        header.style.backdropFilter = 'none';
     }
 }
 let mobileNav = document.querySelector('#nav-mobile');

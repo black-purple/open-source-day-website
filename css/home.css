@@ -43,7 +43,7 @@ h1{
     background-color: #f0f8ff60;
 }
 #landing{
-    background-image: url(../img/ista\ ntic\ safi\ img.JPG);    
+    background:linear-gradient(#000000b3,#000000b3),url(../img/ista\ ntic\ safi\ img.JPG);    
     height: 100vh;
     width: 99vw;
     display: flex;
@@ -193,6 +193,9 @@ footer span:nth-child(2) a{
 }
 #hideNav,#showNav{
     display: none;
+    color: aliceblue;
+    float: right;
+    font-size:x-large;
 }
 #showNav, #hideNav{
     border: none;
@@ -232,9 +235,13 @@ a[href='#anchor']{
 }
 .sectionTitle{
     padding: 1rem;
-    margin-inline: 3rem;
+    margin-inline: 7rem;
+    font-size: xx-large;
 }
 @media only screen and (max-width: 768px) {
+    .sectionTitle{
+        margin-inline: 3rem;
+    }
     h1{
         font-size: large;
     }
@@ -252,13 +259,14 @@ a[href='#anchor']{
         flex-direction: column;
     }
     #nav-mobile a{
-        display: inline;
+        display: none;
     }
     .cards-container{
         flex-direction: column;
         margin-inline: 1rem;
     }
     .card{
+        border: .1rem solid #f0f8ff30;
         flex-direction: column;
         justify-content: center;
         align-items: center;
