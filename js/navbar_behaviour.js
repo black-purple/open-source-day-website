@@ -19,15 +19,4 @@ document.body.onscroll = () => {
     }
 }
 
-document.body.onscroll = () => {
-    let header = document.querySelector('header');
-    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
-        header.style.transition = 'inset .3s ease-in-out';
-        header.style.inset = '.4rem .3rem auto .4rem';
-    }else{
-        header.style.transition = 'inset .3s ease-in-out';
-        header.style.inset = '70vh auto auto .4rem';
-    }
-}
-
 applyStyle(true, header);

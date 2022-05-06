@@ -267,10 +267,7 @@ a[href='#anchor'] {
 }
 
 @media only screen and (max-width: 768px) {
-    header{
-        inset: 70vh auto auto .4rem;
-    }
-    .card2{
+    .card2, .card{
         width: 80%;
         margin-inline: 0;
     }
