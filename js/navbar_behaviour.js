@@ -34,5 +34,5 @@ hideNav.onclick = () =>{
     hideNav.parentElement.style.inset = '.4rem .3rem auto .4rem'
     showNav.style.display = 'inline';
     hideNav.style.display = 'none';
-    applyStyle(false, header);
+    applyStyle(true, header);
 }
