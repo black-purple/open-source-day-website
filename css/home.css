@@ -27,6 +27,11 @@ html{
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+article{
+    padding-inline: 5rem;
+    font-size: larger;
+    margin-block: 1rem;
+}
 body{
     margin: 0;
     padding: 0;
@@ -43,15 +48,15 @@ h1{
     background-color: #f0f8ff60;
 }
 #landing{
-    background:linear-gradient(#000000b3,#000000b3),url(../img/ista\ ntic\ safi\ img.JPG);    
+    background:linear-gradient(#00000074,#0000007e),url(../img/banner2.jpg);   
     height: 100vh;
     width: 99vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-position: center;
-    background-size: cover;
+    background-position: 100%;
+    background-size: cover ;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
@@ -86,6 +91,8 @@ header nav a{
 }
 #nav-mobile{
     display: none;
+    justify-content: center;
+    
 }
 header nav a:hover{
     color: var(--s-sry-clr);
@@ -104,7 +111,7 @@ h1 sup{
 	font-family: 'Beon', sans-serif;
 	color: hsl(var(--sry-clr)/.6);
 	text-decoration: none;
-    font-weight: 500;
+    font-weight: bolder;
     text-shadow: 0 0 .5em hsl(var(--sry-clr));
     color: hsl(var(--pry-clr));
     animation: glow 2s infinite;
@@ -223,6 +230,31 @@ a[href='#anchor']{
     border-radius: .2rem;
     animation: fadein .3s ease-in;
 }
+.card .cardHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 20%;
+}
+.cardHeader img{
+    z-index: 1;
+    border-radius: 50%;
+    width: 7rem;
+    border: solid .5rem #f0f8ff09;
+}
+.cardHeader span{
+    position: absolute;
+    height: 10rem;
+    width: 100%;
+    background-image: linear-gradient(to top, #ee0572a1, transparent);
+}
+.cardBody{
+    height: 80%;
+    width: 100%;
+}
 @keyframes fadein{
     from{
         opacity: 0;
@@ -240,12 +272,19 @@ a[href='#anchor']{
     font-size: xx-large;
     border-left: .2rem solid #ee0572;
 }
+
 @media only screen and (max-width: 768px) {
+    #landing{
+        background-image: url(../img/banner3.jpg);
+    }
     .sectionTitle{
         margin-inline: 3rem;
     }
     h1{
         font-size: large;
+    }
+    article{
+        padding-inline: 1rem;
     }
     header{
         background-color: #1c1b2254;
