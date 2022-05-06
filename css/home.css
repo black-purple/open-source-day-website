@@ -6,7 +6,7 @@
     --pry-clr-preview: #1c1b22;
     --sry-clr: 332 41% 38%;
     --sry-clr-preview: #a03869;
-    --s-sry-clr: #ee0572;
+    --s-sry-clr: #7360c7;
 }
 
 html {
@@ -125,10 +125,10 @@ h1 sup {
 
 .beon-f {
     font-family: 'Beon', sans-serif;
-    color: hsl(var(--sry-clr)/.6);
+    color: var(--s-sry-clr);
     text-decoration: none;
     font-weight: bolder;
-    text-shadow: 0 0 .5em hsl(var(--sry-clr));
+    text-shadow: 0 0 .5em var(--s-sry-clr);
     color: hsl(var(--pry-clr));
     animation: glow 2s infinite;
 }
@@ -159,15 +159,11 @@ footer span:nth-child(2) a {
 }
 
 .fa-brands {
-    color: #a03869;
+    color: var(--s-sry-clr);
     font-size: 2rem;
     transition: color .2s ease-out;
 }
 
-.fa-brands:hover {
-    transition: color .2s ease-in;
-    color: #a03868ac;
-}
 
 .cards-container {
     margin: 5rem;
@@ -204,7 +200,6 @@ footer span:nth-child(2) a {
     text-align: center;
     height: 10rem;
 }
-
 .card img {
     border-radius: 1rem;
     width: 11rem;
@@ -221,58 +216,29 @@ footer span:nth-child(2) a {
 
 @keyframes glow {
     0% {
-        color: hsl(var(--sry-clr) / .4);
+        color: var(--s-sry-clr);
         transition: ease-out;
         text-shadow: none;
     }
 
     50% {
-        color: hsl(var(--sry-clr));
+        color: var(--s-sry-clr);
         text-shadow: 0 0 .5em var(--s-sry-clr);
         transition: ease-in;
     }
 
     100% {
-        color: hsl(var(--sry-clr)/.4);
+        color: var(--s-sry-clr);
         transition: ease-out;
         text-shadow: none;
     }
-}
-
-#hideNav,
-#showNav {
-    display: none;
-    color: aliceblue;
-    float: right;
-    font-size: x-large;
-}
-
-#showNav,
-#hideNav {
-    border: none;
-    background-color: transparent;
-    color: aliceblue;
-    padding: 1rem;
-}
-
-#showNav:hover,
-#hideNav:hover {
-    background-color: #ffffff70;
-}
-
-header.mobile-nav-collapsed {
-    inset: '.4rem .3rem auto .4rem';
-}
-
-header.mobile-nav-shown {
-    inset: '.4rem .3rem .4rem .4rem';
 }
 
 a[href='#anchor'] {
     display: none;
     position: fixed;
     inset: auto 1.5rem 1.5rem auto;
-    background-color: #ee0572;
+    background-color: var(--s-sry-clr);
     padding: 1.1rem 1.2rem;
     font-size: x-large;
     color: aliceblue;
@@ -297,10 +263,13 @@ a[href='#anchor'] {
     padding: 1rem;
     margin-inline: 7rem;
     font-size: xx-large;
-    border-left: .2rem solid #ee0572;
+    border-left: .2rem solid var(--s-sry-clr);
 }
 
 @media only screen and (max-width: 768px) {
+    header{
+        inset: 70vh auto auto .4rem;
+    }
     .card2{
         width: 80%;
         margin-inline: 0;
@@ -321,25 +290,12 @@ a[href='#anchor'] {
         padding-inline: 1rem;
     }
 
-    header {
-        background-color: #1c1b2254;
-    }
-
-    #showNav {
-        display: inline;
-    }
-
-    #nav-desktop {
-        display: none;
-    }
-
-    #nav-mobile {
-        display: flex;
+    nav{
         flex-direction: column;
     }
 
-    #nav-mobile a {
-        display: none;
+    header {
+        background-color: #1c1b2254;
     }
 
     .cards-container {

@@ -13,26 +13,21 @@ let header = document.querySelector('header');
 document.body.onscroll = () => {
     let toUp = document.querySelector('[href="#anchor"]');
     if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-        applyStyle(true, header);
         toUp.style.display = 'inline';
     }else{
-        applyStyle(false, header);
         toUp.style.display = 'none';
     }
 }
-let mobileNav = document.querySelector('#nav-mobile');
-let showNav = document.querySelector('#showNav');
-let hideNav = document.querySelector('#hideNav');
-showNav.onclick = () => {
-    header.style.inset = '.4rem .3rem .4rem .4rem';
-    hideNav.style.display = 'inline';
-    showNav.style.display = 'none';
-    applyStyle(true, header);
+
+document.body.onscroll = () => {
+    let header = document.querySelector('header');
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800){
+        header.style.transition = 'inset .3s ease-in-out';
+        header.style.inset = '.4rem .3rem auto .4rem';
+    }else{
+        header.style.transition = 'inset .3s ease-in-out';
+        header.style.inset = '70vh auto auto .4rem';
+    }
 }
 
-hideNav.onclick = () =>{
-    hideNav.parentElement.style.inset = '.4rem .3rem auto .4rem'
-    showNav.style.display = 'inline';
-    hideNav.style.display = 'none';
-    applyStyle(true, header);
-}
+applyStyle(true, header);
