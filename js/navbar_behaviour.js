@@ -18,5 +18,13 @@ document.body.onscroll = () => {
         toUp.style.display = 'none';
     }
 }
+let btn = document.querySelector('header button');
 
+btn.onclick = ()=>{
+    if (document.querySelector('nav').style.display == 'none'){
+        document.querySelector('nav').style.display = 'flex';
+    }else{
+        document.querySelector('nav').style.display = 'none';
+    }
+}
 applyStyle(true, header);

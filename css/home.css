@@ -266,11 +266,25 @@ a[href='#anchor'] {
     border-left: .2rem solid var(--s-sry-clr);
 }
 
+header button{
+    display: none;
+    border: none;
+    color: aliceblue;
+    background-color: transparent;
+    font-size: x-large;
+}
+
+header button:focus-within nav{
+    display: inline;
+}
+
 @media only screen and (max-width: 768px) {
+    
     .card2, .card{
         width: 80%;
         margin-inline: 0;
     }
+
     #landing {
         background-image: url(../img/banner3.jpg);
     }
@@ -288,11 +302,16 @@ a[href='#anchor'] {
     }
 
     nav{
+        display: none;
         flex-direction: column;
     }
 
+    header button{
+        display: inline;
+    }
     header {
         background-color: #1c1b2254;
+        flex-direction: column;
     }
 
     .cards-container {
