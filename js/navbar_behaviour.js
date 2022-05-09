@@ -19,7 +19,11 @@ document.body.onscroll = () => {
     }
 }
 let btn = document.querySelector('header button');
+let x = window.matchMedia("(max-width: 768px)");
+if (x.matches){
+    document.querySelector('nav').style.display = 'none';
 
+}
 btn.onclick = ()=>{
     if (document.querySelector('nav').style.display == 'none'){
         document.querySelector('nav').style.display = 'flex';
