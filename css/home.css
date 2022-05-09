@@ -51,7 +51,9 @@ h1 {
     border-radius: .5rem;
     background-color: #f0f8ff60;
 }
-
+#logo{
+    width: 2.7rem;
+}
 #landing {
     background: linear-gradient(#00000074, #0000007e), url(../img/banner2.jpg);
     height: 100vh;
@@ -117,10 +119,6 @@ header nav a:hover {
     height: 100vh;
     width: 99vw;
     filter: hue-rotate(-20deg) blur(10px);
-}
-
-h1 sup {
-    font-size: medium;
 }
 
 .beon-f {
