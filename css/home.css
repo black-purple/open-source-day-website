@@ -283,6 +283,7 @@ header button:focus-within nav{
     .card2, .card{
         width: 80%;
         margin-inline: 0;
+        border: .1rem solid #f0f8ff30;
     }
 
     #landing {
